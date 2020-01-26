@@ -1,0 +1,74 @@
+\subsection{The $\pi$-isotypical component}\label{Component}
+We determine the $\pi$-isotypical component of various cohomology groups.
+
+By assumption $\pi$ is cohomological with respect to an algebraic coefficient system $V_{\al,\C}$, i.e.~there exists an irreducible algebraic $\C$-representation $V_{\sigma,\C}$ of $G_\C$ for every embedding $\sigma\in\Sigma$ such that 
+$$V_{\al,\C}=\bigotimes_{\sigma\in\Sigma} V_{\sigma,\C}$$
+and
+$$\Hom_{\C[G(\A^\infty)]}(\pi^{\infty},\varinjlim_{K^{\p}K_\p} \HH^{\ast}(X_{K^{\p}K_\p},V_{\al,\C}^\vee))\neq 0.$$
+Here we let $G(F)$ act on $V_{\sigma,\C}^\vee$ via the embedding $\sigma$.
+
+For the remainder of the article we fix a finite extension $\Q_\pi\subseteq\overline{\Q}$ of $\Q$ such that
+\begin{itemize}
+\item $\left|\Hom(F,\Q_\pi)\right|=\left|\Hom(F,\overline{\Q})\right|$ and
+\item the finite part $\pi\pinfty$ away from $\p$ of $\pi$ has a model over $\Q_\pi$, i.e.~$\pi\pinfty=\pi\pinfty_{\Q_\pi}\otimes_{\Q_\pi}\C.$
+\end{itemize}
+By the first assumption on $\Q_\pi$ each $V_{\sigma,\C}$ (viewed as an representation of $G(F)$) has a model $V_{\sigma,\Q_\pi}$ over $\Q_\pi$ and we put $V_{\al,\Q_pi}=\otimes_{\sigma}V_{\sigma,\Q_\pi}.$
+
+Let $\Omega$ be a field extension of $\Q_\pi$ and $K^\p\subseteq G(\A\pinfty)$ a compact, open subgroup such that $(\pi\pinfty_{\Q_\pi})^{K^\p}\neq 0$.
+We denote the $\Omega$-valued Hecke algebra of level $K^\p$ away from $\p$ by
+$$\mathbb{\T}=\mathbb{T}(K^\p)_\Omega=C_c(K^\p\backslash G(\A\pinfty)/K^\p,\Omega).$$
+If $V$ is a $\mathbb{T}(K^\p)_\Omega$-module, we write
+$$V[\pi]=\Hom_{\mathbb{T}}((\pi\pinfty_\Omega)^{K^\p},V).$$
+
+The $\Omega$-valued smooth Steinberg representation $\St_{\p,\Omega}$ of $G_\p$ is the space of all locally constant $\Omega$-valued functions on $\PP(F_\p)$ modulo constant function.
+The invariants of $\St_{\p,\Omega}$ under the Iwahori subgroup $\I_\p\subseteq G_\p$ are one-dimensional.
+Thus, by Frobenius reciprocity there exists a unique (up to scalar) non-zero $G_\p$-equivariant map
+$$\cind_{I_\p}^{G_\p}\Omega \too \St_{\p,\Omega},$$
+which in turn induces a Hecke-equivariant map
+\begin{align}\label{evaluation}
+\ev^{(d)}\colon \HH^{d}_?(G(F),\Ah(K^\p,\St_{\p,\Omega};N))\too \HH^{d}_?(X_{K^\p I_\p},N)
+\end{align}
+for every $\Omega[G(F)]$-module $N$.
+
+
+\begin{Pro}\label{dimensions}
+The following holds:
+\begin{enumerate}[(a)]
+\item\label{firstdim} For every character $\epsilon\colon \pi_0(G_\infty)\to\left\{\pm 1 \right\}$ and $?\in\left\{\emptyset,c\right\}$ we have
+ $$\dim_\Omega \HH^{d}_?(X_{K^\p I_\p},V_{\al,\Omega}^\vee(\epsilon))[\pi]= \binom{r_\C}{d-q}.$$
+\item\label{seconddim} The map $\ev^{(d)}$ induces an isomorphism
+$$\HH^{d}_?(G(F),\Ah_\Omega(K^\p,\St_{\p,\Omega};V_{\al,\Omega}^\vee(\epsilon)))[\pi]\xrightarrow{\ev^{(d)}} \HH^{d}_?(X_{K^\p I_\p},V_{\al,\Omega}^\vee(\epsilon))[\pi]$$
+for every character $\epsilon\colon \pi_0(G_\infty)\to\left\{\pm 1 \right\}$ and all $d$.
+\item\label{thirddim} For every character $\epsilon\colon \pi_0(G_\infty)\to\left\{\pm 1 \right\}$ we have
+$$\dim_\Omega \HH^{d}_?(G(F),\Ah_\Omega(K^\p,\St_{\p,\Omega};V_{\al,\Omega}^\vee(\epsilon)))[\pi] = \binom{r_\C}{d-q}.$$
+\end{enumerate}
+\end{Pro}
+\begin{proof}
+The proof of \cite{Ge3}, Proposition 3.7, also works in this more general setup.
+\end{proof}
+
+
+It is well known that the space of smooth extensions of the trivial representation $\Omega$ with the Steinberg representation is one-dimensional (see for example \cite{Cass}, Theorem 2 (b) for the case $\Omega=\C$).
+We fix a smooth non-split extension
+$$0\too \St_{\p,\Omega} \too \mathcal{E} \too \Omega \too 0.$$
+This induces a short exact sequence
+$$0\too \Ah(K^\p,\Omega;V_{\al,\Omega}^\vee(\epsilon)) \too \Ah_\Q(K,\mathcal{E};V_{\al,\Omega}^\vee(\epsilon))\too \Ah(K^\p,\St_{\p,\Omega};V_{\al,\Omega}^\vee(\epsilon)) \to 0.$$
+The boundary map of the associated the long exact cohomology sequence induces the map
+$$\HH^{d}_?(G(F),\Ah(K^\p,\St_{\p,\Omega};V_{\al,\Omega}^\vee(\epsilon)))[\pi]\xrightarrow{c^{(d)}_?[\pi]^{\epsilon}} \HH^{d+1}_?(G(F),\Ah(K^\p,\Omega;V_{\al,\Omega}^\vee(\epsilon)))[\pi]$$
+on $\pi$-isotypical components.
+
+\begin{Lem}\label{smoothcup}
+The map $c^{(d)}_?[\pi]^{\epsilon}$ is an isomorphism for every sign character $\epsilon$ and every degree $d$.
+\end{Lem}
+\begin{proof}
+The proof of \cite{Ge3}, Lemma 3.8, also works in this more general setup.
+\end{proof}
+
+This together with Proposition \ref{dimensions} \eqref{thirddim} implies:
+\begin{Cor}\label{fourthdim}
+For every character $\epsilon\colon \pi_0(G_\infty)\to\left\{\pm 1 \right\}$ we have
+$$\dim_\Omega \HH^{d+1}_?(G(F),\Ah_\Omega(K^\p,\Omega;V_{\al,\Omega}^\vee(\epsilon)))[\pi] = \binom{r_\C}{d-q}.$$
+\end{Cor}
+
+
+

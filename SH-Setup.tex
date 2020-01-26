@@ -1,0 +1,35 @@
+\section{The setup}\label{Setup}
+We fix an algebraic number field $F$ with ring of integers $\mathcal{O}$.
+In addition, we fix a finite place $\p$ of $F$ lying above the rational prime $p$ and choose embeddings
+$$\C \xhookleftarrow{\iota_{\infty}} \overline{\Q} \xhookrightarrow{\iota_{p}} \overline{\Q_p}.$$
+We let $\Sigma$ denote the set of all embeddings $\sigma\colon F\into \C$ and for a prime $v$ lying above $p$ we let $\Sigma_v$ be the set of all continuous embeddings $\Sigma_{v}$.
+The two chosen embeddings $\iota_{\infty}$ and $\iota_{p}$ yield a decomposition
+$$\Sigma=\bigcup_{v\mid p}\Sigma_v.$$
+
+We denote the number of real places of $F$ by $r_\R$ and the number of complex places by $r_\C$.
+If $v$ is a place of $F$, we denote by $F_{v}$ the completion of $F$ at $v$.
+If $v$ is a finite place, we let $\mathcal{O}_{v}$ denote the valuation ring of $F_{v}$ and $\ord_{v}$ the additive valuation such that $\ord_{v}(\varpi)=1$ for any local uniformizer $\varpi\in\mathcal{O}_{v}$.
+We write $\mathcal{N}(v)$ for the cardinality of the residue field of $\mathcal{O}_{v}$.
+
+Let $\A$ be the adele ring of $F$, i.e~the restricted product over all completions $F_{v}$ of $F$.
+We write $\A^\infty$ (respectively $\A\pinfty$) for the restricted product over all completions of $F$ at finite places (respectively finite places different from $\p$).
+More generally, if $S$ is a finite set of places of $F$ we denote by $\A^{S}$ the restricted product of all completions $F_v$ with $v\notin S$.
+
+If $H$ is an algebraic group over $F$ and $v$ is a place of $F$, we write $H_v=H(F_v)$.
+If $l$ is a (possible infinite) rational place we put $H_l=\prod_{v\mid l}H_v$.
+Further, we put $H_p^{\p}=\prod_{v\mid p,\ v\neq \p}H_v.$
+
+Throughout the article, we fix an inner form $\widetilde{G}$ of the algebraic group $GL_2/F$, which is split at the prime $\p$.
+We denote the centre of $\widetilde{G}$ by $Z$ and put $G=\widetilde{G}/Z$.
+If $G$ is split, we always identify it with $PGL_2$.
+Similarly, if $v$ is a place of $F$ at which $G$ is split, we choose an isomorphism of $G_v$ with $PGL_2(F_v)$.
+We write $q$ for the number of Archimedean places at which $G$ is split.
+
+
+At last, we fix a cuspidal automorphic representation $\pi=\otimes_v \pi_v$ of $G(\A)$ with the following properties:
+\begin{itemize}
+\item $\pi$ is cohomological with respect to an algebraic coefficient system $V_{\al,\C}$ (see Section \ref{Component} for more details)
+ and
+\item $\pi_\p$ is the (smooth) Steinberg representation $\St^{\infty}_{\p}(\C)$ of $G_\p=PGL_2(F_\p)$.
+\end{itemize}
+

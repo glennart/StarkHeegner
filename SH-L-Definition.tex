@@ -1,0 +1,44 @@
+\subsection{Automorphic L-invariants}\label{Definition}
+Let $\Omega\subseteq \overline{\Q_p}$ be a finite extension of $\Q_p$ that contains $\Q_\pi$.
+We define 
+\begin{align*}
+V_{\al,\p,\Omega}&=\bigotimes_{\sigma\in\Sigma_\p}V_{\sigma,\Omega}
+\intertext{and}
+V_{\al,\Omega}^{\p}&=\bigotimes_{\sigma\notin\Sigma_\p}V_{\sigma,\Omega}.
+\end{align*}
+We can extend the action of $G(F)$ on $V_{\al,\p,\Omega}$ (resp.~on $V_{\al,\Omega}^{\p}$) to an action of $G_\p$ (resp.~an action of $G_p^{\p}$).
+Since $V_{\al,\p,\Omega}$ is an irreducible $\Q_p$-rational representation of $G_{F_\p}$ there exists a unique tuple $k_\p=(k_\sigma)_{\sigma\in\Sigma_\p}$ of even integers and an isomorphism $V_{\al,\p,\Omega}\cong V(k_\p)$, which is unique up to multiplication with a scalar.
+We have the following chain of isomorphisms
+\begin{align*}
+\HH^{d}_?(G(F),\Ah_\Omega(K^\p,\St_{\p,\Omega};V_{\al,\Omega}^\vee(\epsilon)))
+\xrightarrow{\ref{Example}} &\HH^{d}_?(G(F),\Ah_\Omega(K^\p,\St_{\p}(k_\p)_\Omega;(V_{\al,\Omega}^{\p})^\vee(\epsilon)))\\
+\xrightarrow{\ref{automatic},\ \ref{flawlessSteinberg}} &\HH^{d}_?(G(F),\Ah_\Omega^{\cont}(K^\p,\St_{\p}(k_\p)^{\univ}_\Omega;(V_{\al,\Omega}^{\p})^\vee(\epsilon))).
+\end{align*}
+Let $J=J_{\mx}\subseteq\Sigma_\p$ be the maximal set of embeddings such that equation \eqref{asteq} holds for all $\sigma\in J_{\mx}$.
+Given a $J$-analytic homomorphism $\lambda\colon F_\p^{\ast}\to\Omega$ we denote by
+$$\mathcal{E}^{J}(k_\p ,\lambda)_\Omega\in\Ext^{1}_{\an}(\St_\p^{J-\an}(k_\p)_\Omega,V(k_\p)_\Omega)$$
+be the extension associated to $\lambda$ at the end of Section \ref{Steinberg}.
+By Proposition \ref{AmiceVelu} we may form the cup product
+\begin{align*}&\HH^{d}_?(G(F),\Ah_\Omega^{\cont}(K^\p,\St_{\p}(k_\p)^{\univ}_\Omega;(V_{\al,\Omega}^{\p})^\vee(\epsilon)))\\
+\xrightarrow{\cup \mathcal{E}^{J}(k_\p ,\lambda)_\Omega} &\HH^{d+1}_?(G(F),\Ah_\Omega(K^\p,V_{\al,\p,\Omega};(V_{\al,\Omega}^{\p})^\vee(\epsilon)))\\
+\cong&\HH^{d+1}_?(G(F),\Ah_\Omega(K^\p,\Omega;(V_{\al,\Omega})^\vee(\epsilon))).
+\end{align*}
+Let $c^{(d)}_?(\lambda)[\pi]^{\epsilon}$ denote the restriction of this map to the $\pi$-isotypical component.
+
+\begin{Def}
+We define the $\LI$-invariant
+$$\LI_?(\pi,\p)^{\epsilon}\subseteq \Hom_{{J_{\mx}-\an}}(F_\p^{\ast},\Omega)$$ of $\pi$ at $\p$ of sign $\epsilon$ as the kernel of the map $\lambda \mapsto c^{(q)}_?(\lambda)[\pi]^{\epsilon}.$
+\end{Def}
+Note that the $\LI$-invariant $\LI_?(\pi,\p)^{\epsilon}$ really depends on the choice of embeddings $\iota_\infty$ and $\iota_\p$ we made at the beginning.
+\begin{Pro}
+The following holds for every sign character $\epsilon$:
+\begin{enumerate}[(a)]
+\item $\LI_c(\pi,\p)^{\epsilon}=\LI(\pi,\p)^{\epsilon}$ and
+\item $\LI(\pi,\p)^{\epsilon}\subseteq \Hom_{J_{\mx}-\an}(F_\p^{\ast},\Omega)$ is a subspace of codimension one that does not contain the subspace of locally constant homomorphisms.
+\end{enumerate}
+\end{Pro}
+\begin{proof}
+The first claim follows from the fact that all maps considered in the construction commute with the map $\delta$ defined in \eqref{delta}.
+The second claim is a direct consequence of Proposition \ref{dimensions} and Lemma \ref{smoothcup}.
+\end{proof}
+

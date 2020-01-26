@@ -1,0 +1,77 @@
+\subsection{P-adic special series}\label{Steinberg}
+Throughout this section we fix a finite extension $\Omega\subseteq \overline{\Q_p}$ of $\Q_p$ such that the image of every continuous embedding $\sigma\in\Sigma_{\p}$ is contained in $\Omega$.
+We write $R$ for its ring of integers.
+
+Given an even integer $l\geq 0$ we let
+$$V(l)_{\Omega}=\Sym^{l}\Omega^{2}\otimes \det^{-l/2}$$
+be the algebraic representation of $PGL_{2,\Omega}$ of highest weight $l$.
+We fix a tuple $k_\p=(k_\sigma)_{\sigma\in\Sigma_\p}$ of even integers $k_\sigma\geq 0$ and put
+$V(k_\p)_{\Omega}=\bigotimes_{\sigma\in\Sigma_\p}V(k_\sigma)_\Omega.$
+We view $V(k_\p)_\Omega$ as a $G_\p$-representation by letting it act on the $k_\sigma$-factor via the embedding $\sigma \colon G_\p\into PGL_2(\Omega)$.
+Note that every irreducible $\Q_p$-rational $\Omega$-representation of $G_{F_\p}$ arises in this way.
+We put $\St_\p(k_\p)_\Omega=\St_{\p,\Omega}\otimes_{\Omega}V(k_\p)_\Omega$.
+\begin{Pro}\label{flawlessSteinberg}
+The locally $\Q_p$-algebraic representation $\St_\p(k_\p)_\Omega$ admits a flawless $R$-lattice.
+\end{Pro}
+\begin{proof}
+TODO: the case of $\Omega$-rational representations is \cite{Vi}, Proposition 0.9.
+Same proof should work here.
+But it should be somewhere in the literature.
+\end{proof}
+
+Let $B\subset G_\p$ the subgroup of upper triangular matrices.
+Given a subset $J\subseteq \Sigma_\p$ and a tuple $l=(l_\sigma)_{\sigma\in \Sigma_\p}$ of integers we define the $J$-analytic character
+$$\chi^J_{l}\colon B\too \Omega^{\ast},\ \begin{pmatrix} a & u \\ 0 & d \end{pmatrix} \mapstoo \prod_{\sigma\in J}\sigma(a/d)^{l_\sigma}.$$
+We let $I^\prime(k_\p)^J_\Omega=\left(\Ind_{B}^{G_\p}\chi^J_{-k/2}\right)^{J-\an}$ be the locally $J$-analytic induction of the character $\chi^J_{-k/2}$ from $B$ to $G_\p$ and put
+$$I(k_\p)^J_\Omega=\bigotimes_{\sigma\notin J}V(k_\sigma)_\Omega  \otimes I^\prime(k_\p)^J_\Omega.$$
+Its subspace of (globally) algebraic vectors can be identified with $V(k_\p)_\Omega$.
+We define
+$$\St^{J-\an}_\p(k_\p ,\Omega)=I(k_\p)^{J}_{\Omega}/V(k_\p)_\Omega.$$
+We have a canonical embedding
+$$\St_\p(k_\p)_\Omega\too \St_\p^{J-\an}(k_\p)_\Omega.$$
+
+\begin{Pro}\label{AmiceVelu}
+Suppose that that for all $\sigma\in J$ the following bound holds:
+\begin{align*}
+\sum_{\tau\in \Sigma_\p,\ \tau\neq\sigma}k_\tau \leq k_\sigma.  \tag{\textasteriskcentered} \label{asteq}
+\end{align*}
+Then the embedding $\St_\p(k_\p)_\Omega\too \St_\p^{J-\an}(k_\p)_\Omega$ induces an isomorphism of $\Omega$-Banach representations
+$$\St_\p(k_\p)_\Omega^{\univ}\too \St_\p^{J-\an}(k_\p)_\Omega^{\univ}.$$
+\end{Pro}
+\begin{proof}
+TODO: should be somewhere in the literature (Breuil, de Ieso, Kidwell).
+REMARK: this is essentially Teitelbaum's extension of Amice-Velu theory.
+\end{proof}
+
+\begin{Rem}
+A standard non-criticality assumption often used in control theorems for overconvergent cohomology (see for example \cite{BWi0}, theorem 8.7) is that equation \eqref{asteq} holds for all $\sigma\in\Sigma_\p$.
+This forces the prime $\p$ to be of degree one or two and the weight $(k_\sigma)_{\sigma\in\Sigma_\p}$ to be parallel. 
+\end{Rem}
+
+The following construction of extensions is due to Breuil (see \cite{Br}, Section 2.1).
+Let $\lambda\colon F_\p^{\ast}\colon\Omega$ be a $J$-analytic homomorphism.
+We define $\tau(\lambda)$ to be the two dimensional $\Omega$-representation given by
+$$\begin{pmatrix} a & u \\ 0 & d \end{pmatrix} \mapstoo \begin{pmatrix} 1 & \lambda(a/d) \\ 0 & 1 \end{pmatrix} $$
+and put $\tau^J(k_\p ,\lambda)=\tau\otimes \chi^J_{-k/2}$.
+The short exact sequence
+$$0 \too\chi^J_{-k/2}\too \tau^J(k_\p ,\lambda) \too \chi^J_{-k/2}\too 0$$
+induces the short exact sequence
+$$0 \too I\prime(k_\p)^J_{\Omega}\too \left(\Ind_{B}^{G_\p}\tau(k_\p ,\lambda)\right)^{J-\an} \too I^\prime(k_\p)^J_{\Omega}\too 0 $$
+of locally $J$-analytic representations.
+Tensoring with $\otimes_{\sigma\notin J}V(k_\sigma)_\Omega$ yields a self-extension of $I(k_\p)^J_{\Omega}.$
+Finally, pullback via $V(k_\p)_\Omega\into I(k_\p)^J_\Omega$ and pushforward along $I(k_\p)^J_\Omega\onto \St_\p(k_\p)^{J-\an}_\Omega$ yields an exact sequence
+\begin{align}\label{extension}
+0 \too \St_\p^{J-\an}(k_\p)_\Omega\too \mathcal{E}^{J}(k_\p ,\lambda)_\Omega\too V(k_\p)_\Omega\too 0.
+\end{align}
+
+\begin{Rem}
+Given two locally $\Q_p$-analytic $\Omega$-representations $W_1$ and $W_2$ we denote by $\Ext^{1}_{\an}(W_1,W_2)$ the space of locally $\Q_p$-analytic extensions of $W_2$ by $W_1$. The map
+$$\Hom_{J-\an}(F_\p^{\ast},\Omega)\too \Ext^{1}_{\an}(\St_\p^{J-\an}(k_\p)_\Omega,V(k_\p)_\Omega),\ \lambda \mapstoo \mathcal{E}^{J}(k_\p ,\lambda)_\Omega$$
+is an isomorphism.
+In the case $F_\p=\Q_p$ this is due to Breuil.
+In fact, an analogous statement is true for higher rank groups as well (see \cite{Ding}, Theorem 1, and \cite{Ge4}, Theorem 2.13).
+\end{Rem}
+
+
+
+

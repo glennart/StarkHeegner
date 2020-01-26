@@ -1,0 +1,108 @@
+\subsection{Cohomology of $\p$-arithmetic groups}\label{Cohomology}
+Throughout this section we fix a ring $R$.
+
+Let $\Div(\PP(F))$ denote the free abelian group on $\PP(F)$ and $\Div_0(\PP(F))$ the kernel of the map $$\Div(\PP(F)) \to \Z,\ \sum_P m_P P \mapsto \sum_P m_P.$$
+The $PGL_2(F)$-action on $\PP(F)$ induces an action on $\Div_0(\PP(F))$.
+If $G$ is non-split, we put $\HH^{i}_c(G(F),A)=\HH^{i}(G(F),A)$.
+If $G$ is split, we define $\HH^{i}_c(G(F),A)=\HH^{i-1}_c(G(F),\Hom_\Z(\Div_0(\PP(F)),A)).$
+In this case the boundary map associated to the short exact sequence
+$$0\too A \too\Hom_\Z(\Div(\PP(F)),A)\too\Hom_\Z(\Div_0(\PP(F)),A)\too 0$$
+yields a map 
+\begin{align}\label{delta}
+\delta\colon\HH^{i}_c(G(F),A)\too\HH^{i}(G(F),A).
+\end{align}
+
+Given a compact, open subgroup $K^\p\subseteq G(\A\pinfty)$, an $R[K^{\p}]$-module $N^{\p}$, an $R[G_\p]$-module $M_\p$ and an $R[G(F)]$-module $N$ we define $\Ah_{R}(K^{\p},N^{\p},M_\p;N)$ as the space of all $R$-bilinear maps $\Phi\colon G(\A\pinfty) \times N^{\p} \times M_\p\to N$
+such that $\Phi(gk,kn,m)=k\Phi(g,n,m)$ for all $g\in  G(\A\pinfty)$, $k\in K^\p$, $n\in\N^{\p}$ and $m\in M_\p$.
+The $R$-module $\Ah_R(K^\p,N^\p,M_\p;N)$ carries a natural $G(F)$-action given by
+$$(\gamma.\Phi)(g,n,m)=\gamma.(\Phi(\gamma^{-1}g,n,\gamma^{-1}.m)).$$
+Most of the times the module $N^{\p}$ is equal to $R$.
+In this case we put $$\Ah_R(K^\p,M_\p;N)=\Ah_R(K^\p,R,M_\p;N).$$
+
+\begin{Exa}\label{Example}
+If $M_\p$ is of the form $\cind_{K_\p}^{G_\p} R$ for some compact, open subgroup $K_\p\subseteq G_\p$, we put
+$$\Ah(K^\p K_\p;N)=\Ah_{R}(K^\p,M_\p;N)$$
+where $?\in\left\{\emptyset,c \right\}$.
+By definition we have a natural $G(F)$-equivariant isomorphism
+$$\Ah(K^\p K_\p;N)\xrightarrow{\cong}C(G(\A^\infty)/K^\p K_\p,N).$$
+
+More generally, suppose $M_\p$ is of the form $\cind_{K_\p}^{G_\p} N_\p$ for some compact, open subgroup $K_\p\subseteq G_\p$ and some $R[G_\p]$-module $N_\p$
+and that $N^{\p}$ is a $G(\A\pinfty)$-module.
+Then the map
+$$\left(\cind_{K_\p}^{G_\p} R\right) \otimes_R N_p \too \cind_{K_\p}^{G_\p} N_\p,\ (f,n)\mapstoo [g \mapsto f(g)\cdot g.n]$$
+is an isomorphism of $R[G_\p]$-modules.
+Hence, its inverse (and a similar map for the $N^{\p}$-part) induces an isomorphism of $R[G(F)]$-modules
+$$\Ah_{R}(K^\p,N^{\p},M_\p;N)\xrightarrow{\cong}C(G(\A^\infty)/K^\p K_\p,\Hom_R(N^{\p}\otimes_R N_\p, N)).$$
+\end{Exa}
+
+\begin{Def}
+An $R[G_\p]$-module $M$ is called flawless if 
+\begin{itemize}
+\item $M$ is projective as an $R$-module and
+\item there exists a finite length exact resolution
+$$0\too P_m\too\cdots\too P_0\too M \too 0$$
+of $R[G_\p]$-modules, where each $P_i$ is a finite direct sum of modules of the form
+$$\cind_{K_\p}^{G_\p} L$$
+with $K_\p\subseteq G_\p$ a compact, open subgroup and $L$ an $R[K_\p]$-module which is finitely generated projective over $R$.
+\end{itemize}
+\end{Def}
+
+\begin{Pro}\label{FlachundNoethersch}
+Suppose that $M$ is a flawless $R[G_\p]$-module and that $N^{\p}$ if finitely generated projective as an $R$-module.
+For $?\in\left\{\emptyset,c \right\}$ we have:
+\begin{enumerate}[(a)]
+\item\label{FuN} The $R$-module $\HH^{d}_?(G(F),\Ah_{R}(K^\p,N^{\p},M_\p;N))$ is finitely generated for all $d$ if $R$ is Noetherian and $N$ is finitely generated as an $R$-module.
+\item\label{FN2} If $S$ is a flat $R$-algebra, then the canonical map
+	 \begin{align*}
+	\HH^{d}_?(G(F),\Ah_{R}(K^\p,N^{\p},M_\p;N))\otimes_R S
+	\too &\HH^{d}_?(G(F),\Ah_{S}(K^\p,N^{\p}_S, M_{\p,S};N_S))
+	\end{align*}
+	is an isomorphism for all $d\in\Z$.
+\end{enumerate}
+\end{Pro}
+\begin{proof}
+This is essentially Proposition 4.9 of \cite{Ge}.
+\end{proof}
+
+\begin{Exa}
+Let $N$ be an $R[G(F)]$-module and $K^{\p}K_\p\subseteq G(\A^{\infty})$ a compact, open subgroup.
+In light of Example \ref{Example} we put
+\begin{align*}
+\HH^{d}(X_{K^{\p}K_\p},N)&=\HH^{d}(G(F),\Ah(K^\p K_\p;N))
+\intertext{respectively}
+\HH^{d}_c(X_{K^{\p}K_\p},N)&=\HH^{d}_c(G(F),\Ah(K^\p K_\p;N)).
+\end{align*}
+If $K^\p K_\p$ is neat or $R$ is a field of characteristic $0$, we can identify these groups with the $N$-valued singular cohomology (respectively singular cohomology with compact support) of the locally symmetric space of level $K^\p K_\p$ associated to $G$.
+\end{Exa}
+
+Let $\Omega$ be a finite extension of $\Q_p$ with ring of integers $R$, $V_\p$ an $\Omega$-Banach representation of $G_\p$ and $V^{\p}$ a finite dimensional continuous $\Omega$-representation of $G_p^{\p}$.
+We view $V^{\p}$ as a $G(F)$-representation via the embedding $G(F)\into G_p^{\p}$.
+Let $\epsilon\colon \pi_0(G_\infty)\to \left\{\pm 1\right\}$ be a sign character.
+We define
+\begin{align*}
+\Ah_\Omega^{\cont}(K^\p,V_\p;V^{\p}(\epsilon))&=C(G(\A\pinfty)/K^\p,\Hom_{\Omega,\cont}(V_\p,V^{\p}(\epsilon))).
+\end{align*}
+
+Now let $V_\p$ merely be a be a locally convex topological $\Omega$-vector space equipped with a continuous $G_\p$-action.
+Suppose that $V_\p$ admits an open $R[G_\p]$-lattice $M_\p$ that is flawless.
+Since $M_\p$ is finitely generated, it follows that the completion of $V_\p$ with respect to $M_\p$ is the universal unitary completion $V_\p^{\univ}$ of $V_\p$.
+We have the following automatic continuity statement.
+\begin{Cor}\label{automatic}
+Let $V_\p$ be a finite length, locally $\Q_p$-algebraic representation of $G_\p$ that admits a $G_\p$-stable separated $R$-lattice and let $V^{\p}$ be a finite dimensional $\Omega$-representation of $G_p^{\p}$.
+Then the canonical map
+$$\HH^{d}_?(G(F),\Ah_{\Omega}^{\cont}(K^\p,V_\p^{\univ};V^{\p}(\epsilon)))\too \HH^{d}_?(G(F),\Ah_{\Omega}(K^\p,V_\p;V^{\p}(\epsilon)))$$
+is an isomorphism for all characters $\epsilon$ and $?\in\left\{\emptyset,c\right\}$.
+\end{Cor}
+\begin{proof}
+By \cite{Vi}, Proposition 0.4, the representation $V_\p$ admits a flawless $R$-lattice $M_\p$. 
+Since $V^\p$ is finite dimensional, Example \ref{Example} implies that
+$$\Ah_{\Omega}(K^\p,V_\p;V^{\p}(\epsilon))=\Ah_{\Omega}(K^\p,V^{\p,\vee},V_\p;\Omega(\epsilon)).$$
+Again, by finite-dimensionality of $V^{\p,\vee}$ we see that it admits a $K_\p$-stable lattice $N_\p$.
+Therefore, Proposition \ref{FlachundNoethersch} \eqref{FN2} implies that the canonical map
+$$\HH^{d}_?(G(F),\Ah_{R}(K^\p,N^{\p},M_\p;R(\epsilon)))\otimes_R \Omega\too \HH^{d}_?(\Ah_{\Omega}(K^\p,V_\p;V^{\p}(\epsilon)))$$
+is an isomorphism.
+But the former can be identified with the cohomology group $\HH^{d}_?(G(F),\Ah_{\Omega}^{\cont}(K^\p,V_\p^{\univ};V^{\p}(\epsilon)))$
+and, thus, the claim follows.
+\end{proof}
+
+
